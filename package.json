@@ -1,10 +1,11 @@
 {
-  "name": "audio-player",
+  "name": "vue-tiny-audio",
   "version": "0.1.0",
-  "private": true,
+  "main": "./lib/tinyAudio.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib --name tinyAudio --dest lib ./src/index.js"
   },
   "dependencies": {
     "core-js": "^3.3.2",
@@ -17,6 +18,10 @@
     "@vue/cli-service": "^4.0.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "vue-slider-component": "^3.0.43",
     "vue-template-compiler": "^2.6.10"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.6"
   }
 }
