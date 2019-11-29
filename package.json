@@ -1,12 +1,19 @@
 {
   "name": "vue-tiny-audio",
   "version": "0.1.0",
+  "description": "A simple vue audio component build by vue-cli",
   "main": "./lib/tinyAudio.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lib": "vue-cli-service build --target lib --name tinyAudio --dest lib ./src/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethercap/vue-tiny-audio.git"
+  },
+  "author": "luziming <luzimingx@gmail.com>",
+  "homepage": "https://github.com/ethercap/vue-tiny-audio",
   "dependencies": {
     "core-js": "^3.3.2",
     "vue": "^2.6.10",

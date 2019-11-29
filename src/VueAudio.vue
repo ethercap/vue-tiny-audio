@@ -16,7 +16,7 @@
     </div>
     <slot name="control" v-bind:audio="audio">
         <div class="tiny-radio-control">
-            <slot name="time">
+            <slot name="time" v-bind:audio="audio">
                 <div class="tiny-radio-time-container">
                     <span class="tiny-radio-time">{{ audio.currentTime | formatSecond }}</span>
                     <VueSlider v-model="sliderTime"
