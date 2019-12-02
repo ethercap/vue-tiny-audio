@@ -97,8 +97,7 @@ export default {
                 speed: 1
             },
             sliderOptions: {
-                lazy: true,
-                contained: true
+                lazy: true
             }
         }
     },
