@@ -31,7 +31,8 @@ export default {
   data () {
     return {
       src: 'xxx',
-      title: 'xxx'
+      title: 'xxx',
+      step: 10
     }
   }
 }
@@ -44,6 +45,7 @@ export default {
 |src|String|undefined|true|
 |title|String|undefined|false|
 |speeds|Array|[1, 1.25, 1.5, 2]|false|
+|step|Number|5|false|
 
 
 ## events
@@ -63,6 +65,8 @@ export default {
 |time|the part of DOM which is related to time|audio(all the data you need)|
 |previous|the previous button|none|
 |next|the next button|none|
+|back|the back button|none|
+|forward|the forward button|none|
 |playOrPause|the play/pause button|status(play/pause/waiting)|
 |speed|the all DOM related to speed control|none|
 |speedLabel|the label of speed control DOM|speed|

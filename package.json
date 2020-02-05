@@ -1,6 +1,6 @@
 {
   "name": "vue-tiny-audio",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A simple vue audio component build by vue-cli",
   "main": "./lib/tinyAudio.umd.min.js",
   "scripts": {

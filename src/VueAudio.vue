@@ -29,6 +29,9 @@
             </slot>
             <div class="tiny-radio-btn-select">
                 <div class="tiny-radio-btns">
+                    <div class="tiny-radio-back" @click="back">
+                        <slot name="back"><button class="btn btn-back">回退</button></slot>
+                    </div>
                     <div class="tiny-radio-previous" @click="previous">
                         <slot name="previous"><button class="btn btn-previous">上一曲</button></slot>
                     </div>
@@ -39,6 +42,9 @@
                     </div>
                     <div class="tiny-radio-next" @click="next">
                         <slot name="next"><button class="btn btn-next">下一曲</button></slot>
+                    </div>
+                    <div class="tiny-radio-forward" @click="forward">
+                        <slot name="forward"><button class="btn btn-forward">前进</button></slot>
                     </div>
                 </div>
                 <div class="tiny-radio-speed-container">
@@ -86,6 +92,10 @@ export default {
         speeds: {
             type: Array,
             default: () => [1, 1.25, 1.5, 2]
+        },
+        step: {
+            type: Number,
+            default: 5
         }
     },
     data() {
@@ -175,6 +185,16 @@ export default {
         next() {
             this.pause();
             this.$emit('next');
+        },
+        back() {
+            let currentTime = this.audio.currentTime;
+            currentTime-= this.step;
+            this.$refs.audio.currentTime = Math.max(0, currentTime);
+        },
+        forward() {
+            let currentTime = this.audio.currentTime;
+            currentTime+= this.step;
+            this.$refs.audio.currentTime = Math.min(this.audio.maxTime, currentTime);
         }
     },
     filters: {
