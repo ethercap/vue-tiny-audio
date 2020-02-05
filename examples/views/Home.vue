@@ -3,6 +3,7 @@
     <tiny-audio :src="src"
         ref="tinyAudio"
         :title="title"
+        :step="step"
         @play="onPlay"
         @pause="onPause"
         @end="onEnd"
@@ -17,8 +18,9 @@ export default {
     name: 'home',
     data() {
         return {
-            src: 'http://isure.stream.qqmusic.qq.com/C400004VHFaC3pGsiH.m4a?guid=113753400&vkey=BFEB2A17555C9812F8BBE445A6B3950F74C9D504BDDED17DC289A7BC2CBEC03E4049B211FABFC92AFC27FA2348513138F02932D3CAAF8A2B&uin=0&fromtag=38',
-            title: 'test'
+            src: 'http://ws.stream.qqmusic.qq.com/C400002xi4L728t6pg.m4a?guid=113753400&vkey=83AAD35DBA0C9CB963A9CA5B409CCD32E07FBF0B24C651623E68EEC854934F8914A95F3D9A26D00ECE608D3A222318A79D44425A9011646C&uin=0&fromtag=38',
+            title: 'test',
+            step: 10
         }
     },
     mounted() {},
